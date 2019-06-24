@@ -8,4 +8,4 @@
 
 ### Adrino installation guide
 
-- https://www.pololu.com/docs/0J61/6.2
+- https://www.pololu.com/docs/0J17/3
