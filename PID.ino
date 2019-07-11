@@ -78,9 +78,45 @@ const char demo_name_line2[] PROGMEM = "follower";
 
 // A couple of simple tunes, stored in program space.
 
-const char welcome[] PROGMEM = ">g32>>c32";
+const char contraPause[] PROGMEM = "!V15 T165 >>c16 >>g16 >>e16 >>>c4";
 
-const char go[] PROGMEM = "L16 cdegreg4";
+const char contra[] PROGMEM = "!V15 T165<" \
+">f16 e-16 c16 <b-16 >c16 <b-16 a-16 g16 a-16 g16 f16 e-16 f16" \
+"<a-16 >c16 e-16" \
+"f2 >c8. <b-16 >c8. d16 e-1 <f2 >c8. <b-16 >c8. d16 <a-1" \
+"f2 >c8. <b-16 >c8. d16 e-1 <f2 >c8. <b-16 >c8. d16 <a-1 >c8 c8. d8. e-8 e-8" \
+"r16 <g16 b-16 >c16 d8 d8 d16 e-8. f8 f8 e-16 f8. c8 c8. d8. e-8 e-8 r16" \
+"<g16 b-16 >c16 d8 d8 d16 e-8. f4 b-4 g16 f16 >d16 c16 <b-16 a16 g16 f16" \
+"g16 f16 d16 c16 d16 c16 <b-16 a16 c4 c16 e-16 g8 f8 e16 d8 <b-16 >c1" \
+"<a4 b-16 >c16 r8 d4 e-16 f16 r8 g4 a16 b-16 r8 >c16 d16 r8 c16 <c16" \
+"e-16 f16 g16 f16 g16 c16 c16 c16 e-16 f16 g8 b-16 a16 b-16 a8 f16" \
+"a16 f16 a16 c16 c16 c16 e-16 f16 g8 b-16 a16 b-16 >c8 d16 <<a4 b-16" \
+">c8. d4 e-16 f8. g16 g16 g8 a16 b-16. >d4 c4 <b-16 b-16 b-16 b-16 r8" \
+"b-16 b-16 b-16 b-8 b-16 r16 a8. g16 g16 g16 g16 r8 g16 g16 g16 g8 g16" \
+"r16 a8. b-16 b-16 b-16 b-16 r8 b-16 b-16 b-16 b-8 b-16 r16 a8. g16 g16" \
+"g16 g16 r16 r16 g8 a16 b-16 >c16 d16 c16 r16 <a16 >d16 d16 d16 d16" \
+"r8 d16 d16 d16 d8 d16 r16 c8. <b-16 b-16 b-16 b-16 r8 b-16 b-16 b-16" \
+"b-8 b-16 r16 >c8. d16 d16 d16 d16 r8 d16 d16 d16 d8 d16 r16 e-8 f16" \
+"f16 f16 f16 r8 f16 f16 f16 f16 r8 r16 <c16 e-16 f16 g16 f16 g16 c8 c16" \
+"e-16 f16 g16 f16 g16 b-8 b-16 a16 b-16 g16 f16 g16 c8 c16 e-16 f16 r16" \
+"g16 r16 a16 r16 b-8." \
+"f2 >c8. <b-16 >c8. d16 e-1 <f2 >c8. <b-16 >c8. d16 <a-1" \
+"f2 >c8. <b-16 >c8. d16 e-1 <f2 >c8. <b-16 >c8. d16 <a-1 >c8 c8. d8. e-8 e-8" \
+"r16 <g16 b-16 >c16 d8 d8 d16 e-8. f8 f8 e-16 f8. c8 c8. d8. e-8 e-8 r16" \
+"<g16 b-16 >c16 d8 d8 d16 e-8. f4 b-4 g16 f16 >d16 c16 <b-16 a16 g16 f16" \
+"g16 f16 d16 c16 d16 c16 <b-16 a16 c4 c16 e-16 g8 f8 e16 d8 <b-16 >c1" \
+"<a4 b-16 >c16 r8 d4 e-16 f16 r8 g4 a16 b-16 r8 >c16 d16 r8 c16 <c16" \
+"e-16 f16 g16 f16 g16 c16 c16 c16 e-16 f16 g8 b-16 a16 b-16 a8 f16" \
+"a16 f16 a16 c16 c16 c16 e-16 f16 g8 b-16 a16 b-16 >c8 d16 <<a4 b-16" \
+">c8. d4 e-16 f8. g16 g16 g8 a16 b-16. >d4 c4 <b-16 b-16 b-16 b-16 r8" \
+"b-16 b-16 b-16 b-8 b-16 r16 a8. g16 g16 g16 g16 r8 g16 g16 g16 g8 g16" \
+"r16 a8. b-16 b-16 b-16 b-16 r8 b-16 b-16 b-16 b-8 b-16 r16 a8. g16 g16" \
+"g16 g16 r16 r16 g8 a16 b-16 >c16 d16 c16 r16 <a16 >d16 d16 d16 d16" \
+"r8 d16 d16 d16 d8 d16 r16 c8. <b-16 b-16 b-16 b-16 r8 b-16 b-16 b-16" \
+"b-8 b-16 r16 >c8. d16 d16 d16 d16 r8 d16 d16 d16 d8 d16 r16 e-8 f16" \
+"f16 f16 f16 r8 f16 f16 f16 f16 r8 r16 <c16 e-16 f16 g16 f16 g16 c8 c16" \
+"e-16 f16 g16 f16 g16 b-8 b-16 a16 b-16 g16 f16 g16 c8 c16 e-16 f16 r16" \
+"g16 r16 a16 r16 b-8.";
 
  
 
@@ -234,7 +270,7 @@ void setup()
 
   OrangutanLCD::printFromProgramSpace(welcome_line2);
 
-  OrangutanBuzzer::playFromProgramSpace(welcome);
+  OrangutanBuzzer::playFromProgramSpace(contraPause);
 
   delay(1000);
 
@@ -384,9 +420,9 @@ void setup()
 
   // Play music and wait for it to finish before we start driving.
 
-  OrangutanBuzzer::playFromProgramSpace(go);
+  OrangutanBuzzer::playFromProgramSpace(contra);
 
-  while(OrangutanBuzzer::isPlaying());
+  
 
 }
 
